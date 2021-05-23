@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>ShopWeb</title>
+    <script src="js/jquery.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+        <body>
+            <div id="shopWeb2">
+                <div class="container">
+                    <div class="item_header">
+                        <div class="item">商品名稱</div>
+                        <div class="price">價格</div>
+                        <div class="count">數量</div>
+                        <div class="total">總計</div>
+                        <div class="operate">操作</div>
+                    </div>
+                    <div class="item_container" v-for="(item,index) in itemList" :key="item.id">
+                        <div class="item_header item_body">
+                            <div class="item_detail">
+                                <img v-bind:src="item.imgUrl" alt="">
+                                <div class="name">{{item.itemName}}</div>
+                            </div>
+
+                            <div class="price"><span>$</span>{{item.price}}</div>
+                            <div class="count">
+                                <button @click="buttonSub(item)">-</button>
+                                {{item.count}}
+                                <button @click="buttonPlus(item)">+</button>
+                            </div>
+                            <div class="total">{{item.price * item.count}}</div>
+                            <div class="operate">
+                                <button @click="buttonDelete(index)">刪除</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Return">
+                    <div class="turn">
+                        <a>返回購物網</a>
+                    </div>
+                </div>
+<script src="js/main.js"></script>
+</body>
+    </div>
+</html>

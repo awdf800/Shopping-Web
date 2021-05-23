@@ -1,0 +1,72 @@
+﻿body {
+  /* 將此取消註解以允許捲動及縮放
+  touch-action: manipulation;
+  */
+  background-color:#ebdbb5;
+}
+
+.item_header {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+    background-color: #a38337;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.item_header div {
+        width: 200px;
+        color: #888;
+        line-height: 30px;
+        color: white;
+}
+.item_header .item{
+    width: 50%;
+}
+.item_body {
+    margin-top: 20px;
+    height: 100px;
+    background-color: #a38337;
+    align-items: center;
+}
+.item_detail img{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+.item_detail .name{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.Return {
+    width: 472px;
+    height: 100%;
+    font-size: 25px;
+    position: fixed;
+    float: left;
+}
+
+.turn {
+    width: 40px;
+    height: 1050px;
+    background: #000;
+    position: relative;
+    bottom: 550px;
+    left: -10px;
+    float: left;
+}
+
+.turn a {
+        color: white;
+        font-size: 22px;
+        width: 20px;
+        position: absolute;
+        display: block;
+        background: red;
+        top: 450px;
+        padding: 70px 10px;
+        cursor: pointer;
+}
